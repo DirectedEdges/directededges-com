@@ -3,6 +3,8 @@ import Base from '../layouts/Base.astro';
 import BookIntro from '../components/BookIntro.astro';
 import Testimonial from '../components/Testimonial.astro';
 import SectionLabel from '../components/SectionLabel.astro';
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <Base
@@ -13,7 +15,7 @@ import SectionLabel from '../components/SectionLabel.astro';
     <SectionLabel label="Services" />
     <h1 class="text-4xl sm:text-5xl leading-tight mb-6">Office hours and consulting</h1>
     <p class="text-lg text-muted mb-8">
-      Obtain smart, efficient and quick feedback to refine a design system's architecture, operations and/or strategy via half- or full-hour sessions and light asynchronous consulting with <a href="/nathan-curtis">Nathan Curtis</a>.
+      Obtain smart, efficient and quick feedback to refine a design system's architecture, operations and/or strategy via half- or full-hour sessions and light asynchronous consulting with <a href={`${base}/nathan-curtis`}>Nathan Curtis</a>.
     </p>
 
     <!-- What we can cover -->
@@ -83,7 +85,7 @@ import SectionLabel from '../components/SectionLabel.astro';
 
       <div class="mt-10">
         <p class="text-muted mb-4">
-          <a href="https://calendar.app.google/rjBYShMURn3Kouaq8">Schedule an introductory call</a> with <a href="/nathan-curtis">Nathan</a> to clarify details and get started.
+          <a href="https://calendar.app.google/rjBYShMURn3Kouaq8">Schedule an introductory call</a> with <a href={`${base}/nathan-curtis`}>Nathan</a> to clarify details and get started.
         </p>
         <BookIntro label="Schedule intro" />
       </div>

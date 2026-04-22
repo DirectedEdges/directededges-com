@@ -3,6 +3,8 @@ import Base from '../layouts/Base.astro';
 import BookIntro from '../components/BookIntro.astro';
 import Testimonial from '../components/Testimonial.astro';
 import SectionLabel from '../components/SectionLabel.astro';
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <Base title="Directed Edges" description="Design system consulting agency led by Nathan Curtis providing advisory coaching, consulting projects, and embedded staff augmentation.">
@@ -11,7 +13,7 @@ import SectionLabel from '../components/SectionLabel.astro';
     <h1 class="text-4xl sm:text-5xl leading-tight mb-6">Architecting design systems at scale since 2006.</h1>
     <BookIntro />
     <p class="mt-10 text-lg text-muted">
-      Directed Edges is a design systems consulting agency formed in 2024 by <a href="/nathan-curtis">Nathan Curtis</a>. We'll apply lessons learned and patterns evolved from design systems large and small to help you thrive.
+      Directed Edges is a design systems consulting agency formed in 2024 by <a href={`${base}/nathan-curtis`}>Nathan Curtis</a>. We'll apply lessons learned and patterns evolved from design systems large and small to help you thrive.
     </p>
   </section>
 
@@ -24,17 +26,17 @@ import SectionLabel from '../components/SectionLabel.astro';
       <div>
         <h3 class="text-lg mb-2">Design &amp; architecture</h3>
         <p class="text-sm text-muted mb-2">Tackle challenges like design tokens, component design and production, composition and library ecosystems.</p>
-        <a href="/design-and-architecture" class="text-sm font-medium">Learn more</a>
+        <a href={`${base}/design-and-architecture`} class="text-sm font-medium">Learn more</a>
       </div>
       <div>
         <h3 class="text-lg mb-2">Office hours &amp; consulting</h3>
         <p class="text-sm text-muted mb-2">Collaborative sessions supported by async consulting to refine architecture, operations and strategy.</p>
-        <a href="/office-hours-and-consulting" class="text-sm font-medium">Learn more</a>
+        <a href={`${base}/office-hours-and-consulting`} class="text-sm font-medium">Learn more</a>
       </div>
       <div>
         <h3 class="text-lg mb-2">Strategy &amp; operations</h3>
         <p class="text-sm text-muted mb-2">Discover where a system is, define where it should go and how it works, and initiate a roadmap to get there.</p>
-        <a href="/design-system-strategy-and-operations" class="text-sm font-medium">Learn more</a>
+        <a href={`${base}/design-system-strategy-and-operations`} class="text-sm font-medium">Learn more</a>
       </div>
       <div>
         <h3 class="text-lg mb-2">Team leadership</h3>

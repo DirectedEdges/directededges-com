@@ -1,0 +1,77 @@
+---
+import Base from '../layouts/Base.astro';
+import BookIntro from '../components/BookIntro.astro';
+import Testimonial from '../components/Testimonial.astro';
+import SectionLabel from '../components/SectionLabel.astro';
+---
+
+<Base title="Directed Edges" description="Design system consulting agency led by Nathan Curtis providing advisory coaching, consulting projects, and embedded staff augmentation.">
+  <!-- Hero -->
+  <section class="max-w-3xl mx-auto px-6 pt-20 pb-16">
+    <h1 class="text-4xl sm:text-5xl leading-tight mb-6">Architecting design systems at scale since 2006.</h1>
+    <BookIntro />
+    <p class="mt-10 text-lg text-muted">
+      Directed Edges is a design systems consulting agency formed in 2024 by <a href="/nathan-curtis">Nathan Curtis</a>. We'll apply lessons learned and patterns evolved from design systems large and small to help you thrive.
+    </p>
+  </section>
+
+  <!-- Services -->
+  <section class="max-w-3xl mx-auto px-6 py-16">
+    <SectionLabel label="Consulting services" />
+    <p class="text-muted mb-10">We tailor services to what you get and how you'd like to work together to deliver the value and impact you need.</p>
+
+    <div class="grid sm:grid-cols-2 gap-8">
+      <div>
+        <h3 class="text-lg mb-2">Design &amp; architecture</h3>
+        <p class="text-sm text-muted mb-2">Tackle challenges like design tokens, component design and production, composition and library ecosystems.</p>
+        <a href="/design-and-architecture" class="text-sm font-medium">Learn more</a>
+      </div>
+      <div>
+        <h3 class="text-lg mb-2">Office hours &amp; consulting</h3>
+        <p class="text-sm text-muted mb-2">Collaborative sessions supported by async consulting to refine architecture, operations and strategy.</p>
+        <a href="/office-hours-and-consulting" class="text-sm font-medium">Learn more</a>
+      </div>
+      <div>
+        <h3 class="text-lg mb-2">Strategy &amp; operations</h3>
+        <p class="text-sm text-muted mb-2">Discover where a system is, define where it should go and how it works, and initiate a roadmap to get there.</p>
+        <a href="/design-system-strategy-and-operations" class="text-sm font-medium">Learn more</a>
+      </div>
+      <div>
+        <h3 class="text-lg mb-2">Team leadership</h3>
+        <p class="text-sm text-muted">Augment your team with a seasoned leader to drive strategy, develop staff, guide architecture and manage work.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial -->
+  <section class="max-w-3xl mx-auto px-6">
+    <Testimonial
+      quote="Working with Nathan is to have a design system encyclopedia and cheat sheet rolled into one."
+      name="Jules Forrest"
+      role="Director, Design Systems at Credit Karma"
+    />
+  </section>
+
+  <!-- Experience -->
+  <section class="max-w-3xl mx-auto px-6 py-16">
+    <SectionLabel label="Experience" />
+    <p class="text-muted mb-6">Trusted by design system teams of all sizes from leading multi-team enterprise programs to system-teams-of-one.</p>
+
+    <Testimonial
+      quote="We've been super lucky to work with Nathan at Automattic."
+      name="John Maeda"
+      role="Head of Computational Design and Inclusion at Automattic"
+    />
+  </section>
+
+  <!-- Tools -->
+  <section class="max-w-3xl mx-auto px-6 py-16">
+    <SectionLabel label="Tools" />
+    <p class="text-muted mb-6">Recent tools include:</p>
+    <ul class="space-y-3">
+      <li><a href="https://www.specsplugin.com">Specs</a> <span class="text-muted">&mdash; Figma plugin</span></li>
+      <li><a href="https://www.figma.com/community/plugin/1077953882260191737/visual-difference">Visual difference</a> <span class="text-muted">&mdash; Figma plugin</span></li>
+      <li><a href="https://contrast-grid.eightshapes.com/">Contrast grid</a> <span class="text-muted">&mdash; Web app</span></li>
+    </ul>
+  </section>
+</Base>

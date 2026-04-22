@@ -1,0 +1,42 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'Design system consulting agency led by Nathan Curtis providing advisory coaching, consulting projects, and embedded staff augmentation.' } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <main class="flex-1">
+      <slot />
+    </main>
+    <footer class="border-t border-border mt-20 py-12">
+      <div class="max-w-3xl mx-auto px-6 flex flex-col sm:flex-row sm:justify-between gap-6 text-sm text-muted">
+        <div>
+          <p class="font-medium text-brand">Directed Edges LLC</p>
+          <p>12805 Misty Creek Ln</p>
+          <p>Fairfax, VA 22033</p>
+        </div>
+        <div class="flex gap-6">
+          <a href="https://x.com/directededges">Twitter</a>
+          <a href="https://www.linkedin.com/in/nathanacurtis/">LinkedIn</a>
+          <a href="mailto:nathan@directededges.com">Email</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

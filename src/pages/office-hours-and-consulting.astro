@@ -1,0 +1,146 @@
+---
+import Base from '../layouts/Base.astro';
+import BookIntro from '../components/BookIntro.astro';
+import Testimonial from '../components/Testimonial.astro';
+import SectionLabel from '../components/SectionLabel.astro';
+---
+
+<Base
+  title="Directed Edges / Design systems coaching and consulting"
+  description="Directed Edges provides coaching and consulting services for clients to get feedback on design system strategy, architecture, and operations. Such informal sessions and ad-hoc consulting are a flexible low cost way to make a big impact."
+>
+  <div class="max-w-3xl mx-auto px-6 pt-20 pb-16">
+    <SectionLabel label="Services" />
+    <h1 class="text-4xl sm:text-5xl leading-tight mb-6">Office hours and consulting</h1>
+    <p class="text-lg text-muted mb-8">
+      Obtain smart, efficient and quick feedback to refine a design system's architecture, operations and/or strategy via half- or full-hour sessions and light asynchronous consulting with <a href="/nathan-curtis">Nathan Curtis</a>.
+    </p>
+
+    <!-- What we can cover -->
+    <section class="my-16">
+      <h2 class="text-2xl mb-4">What we can cover</h2>
+      <p class="text-muted mb-6">Depending on your needs, we can shift conversations from high-level approach to very granular details of topics like:</p>
+
+      <div class="grid sm:grid-cols-2 gap-8">
+        <div>
+          <h3 class="text-lg font-semibold mb-3">Architecture</h3>
+          <ul class="space-y-1 text-muted">
+            <li>Design tokens</li>
+            <li>Naming</li>
+            <li>Theming</li>
+            <li>UI component API</li>
+            <li>Versioning</li>
+            <li>Documentation</li>
+            <li>Library ecosystems</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-3">Strategy / operations</h3>
+          <ul class="space-y-1 text-muted">
+            <li>Vision and mission</li>
+            <li>Roadmaps and priorities</li>
+            <li>Adoption</li>
+            <li>Process</li>
+            <li>Team models</li>
+            <li>Measuring success</li>
+            <li>Releases</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <Testimonial
+      quote="Nathan brings simplicity and clarity to our most challenging problems."
+      name="Emiliano Moran"
+      role="Senior Design Manager at Expedia Group"
+    />
+
+    <!-- How it works -->
+    <section class="my-16">
+      <h2 class="text-2xl mb-6">How it works</h2>
+      <p class="text-muted mb-8">Coaching and consulting are offered in month-long cycles that combine live office hours sessions with asynchronous support.</p>
+
+      <div class="grid sm:grid-cols-2 gap-8">
+        <div>
+          <h3 class="text-lg font-semibold mb-2">Office hours</h3>
+          <p class="text-muted text-sm">Sessions explore topic(s) to identify feedback needed, present materials and critique as a group.</p>
+          <p class="text-sm font-medium mt-2">Four weekly sessions per cycle.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-2">Async support</h3>
+          <p class="text-muted text-sm">Beyond the sessions, clients can request async reviews and feedback on emerging solutions and strategy.</p>
+          <p class="text-sm font-medium mt-2">Two hours per cycle.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-2">Client responsibilities</h3>
+          <p class="text-muted text-sm">Clients manage what teammates attend, what topics are on the agenda, and what materials are prepared for each session.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-2">Prioritizing topics</h3>
+          <p class="text-muted text-sm">Teams can prioritize session objectives, stakeholders, and topics during a first session as needed. There's a Figjam for that.</p>
+        </div>
+      </div>
+
+      <div class="mt-10">
+        <p class="text-muted mb-4">
+          <a href="https://calendar.app.google/rjBYShMURn3Kouaq8">Schedule an introductory call</a> with <a href="/nathan-curtis">Nathan</a> to clarify details and get started.
+        </p>
+        <BookIntro label="Schedule intro" />
+      </div>
+    </section>
+
+    <Testimonial
+      quote="Nathan customized his coaching to our specific needs and provided valuable feedback."
+      name="Joanna Kirtley"
+      role="Design System Lead at Liberty Mutual"
+    />
+
+    <!-- FAQ -->
+    <section class="my-16">
+      <h2 class="text-2xl mb-6">FAQ</h2>
+      <div class="divide-y divide-border">
+        <details class="py-4 group">
+          <summary class="cursor-pointer font-medium list-none flex justify-between items-center">
+            Are sessions and materials confidential?
+            <span class="text-muted group-open:rotate-45 transition-transform text-xl">+</span>
+          </summary>
+          <p class="mt-3 text-muted text-sm">Yes. All sessions and materials shared during coaching and consulting engagements are treated as confidential.</p>
+        </details>
+        <details class="py-4 group">
+          <summary class="cursor-pointer font-medium list-none flex justify-between items-center">
+            What payments do you accept?
+            <span class="text-muted group-open:rotate-45 transition-transform text-xl">+</span>
+          </summary>
+          <p class="mt-3 text-muted text-sm">We accept payment via invoice with standard net-30 terms.</p>
+        </details>
+        <details class="py-4 group">
+          <summary class="cursor-pointer font-medium list-none flex justify-between items-center">
+            Is this service for individuals or teams?
+            <span class="text-muted group-open:rotate-45 transition-transform text-xl">+</span>
+          </summary>
+          <p class="mt-3 text-muted text-sm">Both. Sessions can be attended by individuals or groups of teammates working on a design system together.</p>
+        </details>
+        <details class="py-4 group">
+          <summary class="cursor-pointer font-medium list-none flex justify-between items-center">
+            Is this service formal &ldquo;coaching&rdquo; or is it less formal than that?
+            <span class="text-muted group-open:rotate-45 transition-transform text-xl">+</span>
+          </summary>
+          <p class="mt-3 text-muted text-sm">It's less formal. Think of it as expert office hours — collaborative conversation and feedback, not a structured coaching program.</p>
+        </details>
+        <details class="py-4 group">
+          <summary class="cursor-pointer font-medium list-none flex justify-between items-center">
+            Does this service include workshops or presented talks?
+            <span class="text-muted group-open:rotate-45 transition-transform text-xl">+</span>
+          </summary>
+          <p class="mt-3 text-muted text-sm">No. Coaching and consulting sessions are interactive conversations, not prepared presentations or workshops. Those are available as separate engagements.</p>
+        </details>
+      </div>
+    </section>
+
+    <Testimonial
+      quote="His contributions greatly enriched our understanding and significantly improved the quality."
+      name="Mohit Sharma"
+      role="Chief Design Officer at Software AG"
+    />
+  </div>
+</Base>

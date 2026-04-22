@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #1a1a1a;
+  --color-muted: #6b7280;
+  --color-link: #2563eb;
+  --color-link-hover: #1d4ed8;
+  --color-border: #e5e7eb;
+  --color-bg: #ffffff;
+  --color-bg-alt: #f9fafb;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  html {
+    @apply antialiased;
+  }
+  body {
+    @apply text-brand bg-bg font-sans leading-relaxed;
+  }
+  a {
+    @apply text-link hover:text-link-hover underline decoration-link/30 hover:decoration-link/60 transition-colors;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+}

@@ -1,6 +1,8 @@
 ---
 import Base from '../layouts/Base.astro';
 import SectionLabel from '../components/SectionLabel.astro';
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <Base
@@ -8,8 +10,13 @@ import SectionLabel from '../components/SectionLabel.astro';
   description="Nathan started Directed Edges to serve his clients and community practicing design systems. He's passionate about information architecture, statistics and UX design."
 >
   <div class="max-w-3xl mx-auto px-6 pt-20 pb-16">
-    <h1 class="text-4xl sm:text-5xl leading-tight mb-2">Nathan Curtis</h1>
-    <p class="text-xs font-semibold uppercase tracking-widest text-muted mb-8">Design system consultant</p>
+    <div class="flex flex-col sm:flex-row gap-6 sm:gap-10 items-start mb-8">
+      <img src={`${base}/images/nathan-curtis.jpg`} alt="Nathan Curtis" class="w-28 h-28 rounded-full object-cover shrink-0" />
+      <div>
+        <h1 class="text-4xl sm:text-5xl leading-tight mb-2">Nathan Curtis</h1>
+        <p class="text-xs font-semibold uppercase tracking-widest text-muted">Design system consultant</p>
+      </div>
+    </div>
 
     <p class="text-lg text-muted mb-4">
       Nathan started Directed Edges in 2024 to provide design system expertise to clients and the worldwide community. He's passionate about information architecture and consults with design systems teams to architect solutions, drive strategy and optimize operations.
@@ -21,7 +28,42 @@ import SectionLabel from '../components/SectionLabel.astro';
     <!-- Experience -->
     <section class="my-16">
       <SectionLabel label="Experience" />
-      <p class="text-muted">Since 2006, Nathan has consulted with 80+ design system teams. <span class="text-sm">(## indicates months serving as a lead driving the design system program.)</span></p>
+      <p class="text-muted mb-6">Since 2006, Nathan has consulted with 80+ design system teams, including:</p>
+      <p class="text-xs text-muted mb-4">(##) indicates months serving as a lead driving the design system program.</p>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-x-8 gap-y-2 text-sm">
+        <p>Morningstar <span class="text-muted">(24)</span></p>
+        <p>Verizon <span class="text-muted">(24)</span></p>
+        <p>Cisco <span class="text-muted">(24)</span></p>
+        <p>Marriott <span class="text-muted">(18)</span></p>
+        <p>Discovery <span class="text-muted">(12)</span></p>
+        <p>Credit Karma <span class="text-muted">(12)</span></p>
+        <p>Fidelity <span class="text-muted">(12)</span></p>
+        <p>Capital One <span class="text-muted">(9)</span></p>
+        <p>Target <span class="text-muted">(6)</span></p>
+        <p>IDEXX <span class="text-muted">(6)</span></p>
+        <p>NetApp <span class="text-muted">(6)</span></p>
+        <p>ServiceNow <span class="text-muted">(6)</span></p>
+        <p>REI <span class="text-muted">(3)</span></p>
+        <p>Google</p>
+        <p>Salesforce</p>
+        <p>eBay</p>
+        <p>Twitter</p>
+        <p>Yahoo</p>
+        <p>Sun</p>
+        <p>Wells Fargo</p>
+        <p>Liberty Mutual</p>
+        <p>Automattic</p>
+        <p>Nationwide</p>
+        <p>Dropbox</p>
+        <p>Atlassian</p>
+        <p>Ancestry</p>
+        <p>Hudl</p>
+        <p>Faire</p>
+        <p>Citi</p>
+        <p>FCS America</p>
+        <p>Paylocity</p>
+        <p>Software AG</p>
+      </div>
     </section>
 
     <!-- Writing -->
@@ -44,10 +86,15 @@ import SectionLabel from '../components/SectionLabel.astro';
         </div>
       </div>
 
-      <div>
-        <h3 class="text-lg font-semibold mb-1"><a href="https://www.amazon.com/Modular-Web-Design-Components-Documentation/dp/0321601351">Modular Web Design</a></h3>
-        <p class="text-sm text-muted mb-2">2009</p>
-        <p class="text-muted">A design systems book before &ldquo;design systems.&rdquo; It elaborates on component architecture, how to build libraries and create component and pattern docs using tools of the day.</p>
+      <div class="flex gap-6 items-start">
+        <a href="https://www.amazon.com/Modular-Web-Design-Components-Documentation/dp/0321601351" class="shrink-0">
+          <img src={`${base}/images/modular-web-design.png`} alt="Modular Web Design book cover" class="w-24 rounded shadow-sm" />
+        </a>
+        <div>
+          <h3 class="text-lg font-semibold mb-1"><a href="https://www.amazon.com/Modular-Web-Design-Components-Documentation/dp/0321601351">Modular Web Design</a></h3>
+          <p class="text-sm text-muted mb-2">2009</p>
+          <p class="text-muted">A design systems book before &ldquo;design systems.&rdquo; It elaborates on component architecture, how to build libraries and create component and pattern docs using tools of the day.</p>
+        </div>
       </div>
     </section>
 

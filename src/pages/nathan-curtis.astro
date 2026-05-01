@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import SectionLabel from '../components/SectionLabel.astro';
+import BookIntro from '../components/BookIntro.astro';
 
 const base = import.meta.env.BASE_URL;
 ---
@@ -19,76 +20,145 @@ const base = import.meta.env.BASE_URL;
     </div>
 
     <p class="text-lg text-muted mb-4">
-      Nathan started Directed Edges in 2024 to provide design system expertise to clients and the worldwide community. He's passionate about information architecture and consults with design systems teams to architect solutions, drive strategy and optimize operations.
+      Nathan wrote <a href="https://www.amazon.com/Modular-Web-Design-Components-Documentation/dp/0321601351">the book on modular design</a> before "design systems" had a name. In the 20 years since, he's embedded in 100+ systems as leader, architect, designer, developer, and product owner&mdash;building the technical foundations and operational muscle that make systems durable. His <a href="https://nathanacurtis.substack.com/">writing</a> has reached 2M+ readers. His <a href="https://www.specsplugin.com">tools</a> turn component definitions into structured data for humans and machines. Previously he led <a href="https://www.curious-squid.com/">EightShapes</a> with Dan Brown (2006&ndash;2024).
     </p>
     <p class="text-lg text-muted mb-4">
-      Nathan wrote <a href="https://www.amazon.com/Modular-Web-Design-Components-Documentation/dp/0321601351">Modular Web Design</a> in 2009, authors a well-known <a href="https://medium.com/@nathanacurtis/lists">design systems blog</a>, and speaks at events worldwide. Prior to starting Directed Edges, Nathan led EightShapes with <a href="https://www.curious-squid.com/">Dan Brown</a> from 2006 to 2024.
+      If your system needs to deliver more value as your organization moves toward AI-driven product development, Nathan can help you get there.
     </p>
+    <div class="mt-6 mb-4">
+      <BookIntro />
+    </div>
 
-    <!-- Experience -->
+    <!-- Experience (SKETCH) -->
     <section class="my-10">
       <SectionLabel label="Experience" />
-      <p class="text-muted mb-6">Since 2006, Nathan has consulted with 80+ design system teams, including:</p>
-      <p class="text-xs text-muted mb-4">(##) indicates months serving as a lead driving the design system program.</p>
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-x-8 gap-y-2 text-sm">
-        <p>Morningstar <span class="text-muted">(24)</span></p>
-        <p>Verizon <span class="text-muted">(24)</span></p>
-        <p>Cisco <span class="text-muted">(24)</span></p>
-        <p>Marriott <span class="text-muted">(18)</span></p>
-        <p>Discovery <span class="text-muted">(12)</span></p>
-        <p>Credit Karma <span class="text-muted">(12)</span></p>
-        <p>Fidelity <span class="text-muted">(12)</span></p>
-        <p>Capital One <span class="text-muted">(9)</span></p>
-        <p>Target <span class="text-muted">(6)</span></p>
-        <p>IDEXX <span class="text-muted">(6)</span></p>
-        <p>NetApp <span class="text-muted">(6)</span></p>
-        <p>ServiceNow <span class="text-muted">(6)</span></p>
-        <p>REI <span class="text-muted">(3)</span></p>
-        <p>Google</p>
-        <p>Salesforce</p>
-        <p>eBay</p>
-        <p>Twitter</p>
-        <p>Yahoo</p>
-        <p>Sun</p>
-        <p>Wells Fargo</p>
-        <p>Liberty Mutual</p>
-        <p>Automattic</p>
-        <p>Nationwide</p>
-        <p>Dropbox</p>
-        <p>Atlassian</p>
-        <p>Ancestry</p>
-        <p>Hudl</p>
-        <p>Faire</p>
-        <p>Citi</p>
-        <p>FCS America</p>
-        <p>Paylocity</p>
-        <p>Software AG</p>
-      </div>
-    </section>
 
-    <!-- Writing -->
-    <section class="my-10">
-      <SectionLabel label="Writing" />
-
-      <div class="mb-10">
-        <h3 class="text-lg font-semibold mb-1"><a href="https://medium.com/@nathanacurtis/lists">Blog (on Medium.com)</a></h3>
-        <p class="text-sm text-muted mb-4">2015 &ndash; present, 2,000,000+ views</p>
-        <p class="text-muted mb-3">Browse by category:</p>
-        <div class="flex flex-wrap gap-2">
-          <a href="https://medium.com/@nathanacurtis/list/design-tokens-and-visual-style-a70978d80056" class="text-sm px-3 py-1 rounded-full border border-border hover:bg-bg-alt no-underline">Visual Style</a>
-          <a href="https://medium.com/@nathanacurtis/list/ui-components-90c74982dd7e" class="text-sm px-3 py-1 rounded-full border border-border hover:bg-bg-alt no-underline">UI Components</a>
-          <a href="https://medium.com/@nathanacurtis/list/documentation-840a06090c66" class="text-sm px-3 py-1 rounded-full border border-border hover:bg-bg-alt no-underline">Documentation</a>
-          <a href="https://medium.com/@nathanacurtis/list/releases-a6203df2a767" class="text-sm px-3 py-1 rounded-full border border-border hover:bg-bg-alt no-underline">Releases</a>
-          <a href="https://medium.com/@nathanacurtis/list/planning-c9a34f4e0526" class="text-sm px-3 py-1 rounded-full border border-border hover:bg-bg-alt no-underline">Planning</a>
-          <a href="https://medium.com/@nathanacurtis/list/process-86df670f62c0" class="text-sm px-3 py-1 rounded-full border border-border hover:bg-bg-alt no-underline">Process</a>
-          <a href="https://medium.com/@nathanacurtis/list/people-teams-627847d004e3" class="text-sm px-3 py-1 rounded-full border border-border hover:bg-bg-alt no-underline">People and Teams</a>
-          <a href="https://medium.com/@nathanacurtis/list/systems-of-systems-c5c4edef3560" class="text-sm px-3 py-1 rounded-full border border-border hover:bg-bg-alt no-underline">Systems of Systems</a>
+      <!-- Stats row -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
+        <div>
+          <p class="text-3xl font-bold">20+</p>
+          <p class="text-sm text-muted">years in design systems</p>
+        </div>
+        <div>
+          <p class="text-3xl font-bold">100+</p>
+          <p class="text-sm text-muted">design systems consulted</p>
+        </div>
+        <div>
+          <p class="text-3xl font-bold">100+</p>
+          <p class="text-sm text-muted">conference talks and workshops</p>
+        </div>
+        <div>
+          <p class="text-3xl font-bold">2</p>
+          <p class="text-sm text-muted">Clarity conference emcee (2018, 2022)</p>
         </div>
       </div>
 
+      <!-- Tiered clients -->
+      <div class="mb-6">
+        <h4 class="text-sm font-semibold mb-2">Led the program <span class="font-normal text-muted">(9+ months as embedded leader or architect)</span></h4>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-x-8 gap-y-1 text-sm mb-6">
+          <p>Morningstar</p>
+          <p>Verizon</p>
+          <p>Cisco</p>
+          <p>Marriott</p>
+          <p>Discovery</p>
+          <p>Credit Karma</p>
+          <p>Fidelity</p>
+          <p>Capital One</p>
+          <p>IDEXX</p>
+          <p>NetApp</p>
+          <p>Sun</p>
+          <p>Expedia</p>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="text-sm font-semibold mb-2">Advised or consulted on projects</h4>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-x-8 gap-y-1 text-sm">
+          <p>Google</p>
+          <p>Salesforce</p>
+          <p>Target</p>
+          <p>ServiceNow</p>
+          <p>REI</p>
+          <p>Chase</p>
+          <p>eBay</p>
+          <p>Twitter</p>
+          <p>Yahoo</p>
+          <p>Wells Fargo</p>
+          <p>Liberty Mutual</p>
+          <p>Automattic</p>
+          <p>Nationwide</p>
+          <p>Dropbox</p>
+          <p>Atlassian</p>
+          <p>Ancestry</p>
+          <p>Hudl</p>
+          <p>Faire</p>
+          <p>Citi</p>
+          <p>FCS America</p>
+          <p>Paylocity</p>
+          <p>Software AG</p>
+        </div>
+      </div>
+
+      <div class="mt-6">
+        <h4 class="text-sm font-semibold mb-2">Skills</h4>
+        <div class="flex flex-wrap gap-2">
+          <span class="text-sm px-3 py-1 rounded-full border border-border">Leader</span>
+          <span class="text-sm px-3 py-1 rounded-full border border-border">Architect</span>
+          <span class="text-sm px-3 py-1 rounded-full border border-border">Designer</span>
+          <span class="text-sm px-3 py-1 rounded-full border border-border">Developer</span>
+          <span class="text-sm px-3 py-1 rounded-full border border-border">Product Owner</span>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Blog -->
+    <section class="my-10">
+      <SectionLabel label="Blog" />
+      <p class="text-muted mb-4">Nathan has written about design systems since 2015, with over 2 million reads on <a href="https://nathanacurtis.substack.com/">Substack</a> and <a href="https://medium.com/@nathanacurtis">Medium</a>.</p>
+
+      <p class="text-muted mb-3">Greatest hits:</p>
+      <div class="space-y-6">
+        <div class="flex gap-6 items-start">
+          <a href="https://nathanacurtis.substack.com/p/naming-tokens-in-design-systems-9e86c7444676" class="shrink-0">
+            <img src={`${base}/images/writing-naming-tokens.png`} alt="Naming Tokens in Design Systems" class="w-32 sm:w-48 aspect-video object-cover rounded shadow-sm" />
+          </a>
+          <div>
+            <h4 class="text-sm font-semibold mb-1"><a href="https://nathanacurtis.substack.com/p/naming-tokens-in-design-systems-9e86c7444676">Naming Tokens in Design Systems</a></h4>
+            <p class="text-sm text-muted mb-1">Terms, Types, and Taxonomy to Describe Visual Style</p>
+            <p class="text-xs text-muted">2020 &middot; 304,000 reads</p>
+          </div>
+        </div>
+        <div class="flex gap-6 items-start">
+          <a href="https://nathanacurtis.substack.com/p/the-fallacy-of-federated-design-systems-23b9a9a05542" class="shrink-0">
+            <img src={`${base}/images/writing-federated-fallacy.png`} alt="The Fallacy of Federated Design Systems" class="w-32 sm:w-48 rounded shadow-sm" />
+          </a>
+          <div>
+            <h4 class="text-sm font-semibold mb-1"><a href="https://nathanacurtis.substack.com/p/the-fallacy-of-federated-design-systems-23b9a9a05542">The Fallacy of Federated Design Systems</a></h4>
+            <p class="text-sm text-muted mb-1">Avoid the damage and distress of glorifying the wrong model</p>
+            <p class="text-xs text-muted">2024 &middot; 20,000 views</p>
+          </div>
+        </div>
+        <div class="flex gap-6 items-start">
+          <a href="https://nathanacurtis.substack.com/p/space-in-design-systems-188bcbae0d62" class="shrink-0">
+            <img src={`${base}/images/writing-space.png`} alt="Space in Design Systems" class="w-32 sm:w-48 rounded shadow-sm" />
+          </a>
+          <div>
+            <h4 class="text-sm font-semibold mb-1"><a href="https://nathanacurtis.substack.com/p/space-in-design-systems-188bcbae0d62">Space in Design Systems</a></h4>
+            <p class="text-sm text-muted mb-1">From Basics to Expanded Concepts to Apply Space with Intent</p>
+            <p class="text-xs text-muted">2016 &middot; 17,700 claps from 3,500 people</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Book -->
+    <section class="my-10">
+      <SectionLabel label="Book" />
       <div class="flex gap-6 items-start">
         <a href="https://www.amazon.com/Modular-Web-Design-Components-Documentation/dp/0321601351" class="shrink-0">
-          <img src={`${base}/images/modular-web-design.png`} alt="Modular Web Design book cover" class="w-24 rounded shadow-sm" />
+          <img src={`${base}/images/modular-web-design.png`} alt="Modular Web Design book cover" class="w-32 sm:w-48 rounded shadow-sm" />
         </a>
         <div>
           <h3 class="text-lg font-semibold mb-1"><a href="https://www.amazon.com/Modular-Web-Design-Components-Documentation/dp/0321601351">Modular Web Design</a></h3>

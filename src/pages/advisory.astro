@@ -8,22 +8,21 @@ const base = import.meta.env.BASE_URL;
 ---
 
 <Base
-  title="Directed Edges / Design systems coaching and consulting"
-  description="Directed Edges provides coaching and consulting services for clients to get feedback on design system strategy, architecture, and operations. Such informal sessions and ad-hoc consulting are a flexible low cost way to make a big impact."
+  title="Directed Edges / Advisory"
+  description="Directed Edges provides advisory services for design system teams seeking feedback on strategy, architecture, and operations. Collaborative sessions and async consulting offer a flexible, high-impact engagement."
 >
   <div class="max-w-3xl mx-auto px-6 pt-16 pb-10">
     <SectionLabel label="Services" eyebrow />
-    <h1 class="text-4xl sm:text-5xl leading-tight mb-6">Office hours and consulting</h1>
-    <p class="text-lg text-muted mb-8">
+    <h1 class="text-4xl sm:text-5xl leading-tight mb-6">Advisory</h1>
+    <p class="text-lg text-muted mb-6">
       Obtain smart, efficient and quick feedback to refine a design system's architecture, operations and/or strategy via half- or full-hour sessions and light asynchronous consulting with <a href={`${base}/nathan-curtis`}>Nathan Curtis</a>.
     </p>
+    <div class="mb-8">
+      <BookIntro />
+    </div>
+    <p class="text-muted mb-6">Depending on your needs, we can shift conversations from high-level approach to very granular details of topics like:</p>
 
-    <!-- What we can cover -->
-    <section class="my-10">
-      <h2 class="text-2xl mb-4">What we can cover</h2>
-      <p class="text-muted mb-6">Depending on your needs, we can shift conversations from high-level approach to very granular details of topics like:</p>
-
-      <div class="grid sm:grid-cols-2 gap-8">
+    <div class="grid sm:grid-cols-2 gap-8 mb-10">
         <div>
           <h3 class="text-lg font-semibold mb-3">Architecture</h3>
           <ul class="space-y-1 text-muted">
@@ -48,8 +47,7 @@ const base = import.meta.env.BASE_URL;
             <li>Releases</li>
           </ul>
         </div>
-      </div>
-    </section>
+    </div>
 
     <Testimonial
       quote="Nathan brings simplicity and clarity to our most challenging problems."
@@ -74,22 +72,8 @@ const base = import.meta.env.BASE_URL;
           <p class="text-muted text-sm">Beyond the sessions, clients can request async reviews and feedback on emerging solutions and strategy.</p>
           <p class="text-sm font-medium mt-2">Two hours per cycle.</p>
         </div>
-        <div>
-          <h3 class="text-lg font-semibold mb-2">Client responsibilities</h3>
-          <p class="text-muted text-sm">Clients manage what teammates attend, what topics are on the agenda, and what materials are prepared for each session.</p>
-        </div>
-        <div>
-          <h3 class="text-lg font-semibold mb-2">Prioritizing topics</h3>
-          <p class="text-muted text-sm">Teams can prioritize session objectives, stakeholders, and topics during a first session as needed. There's a Figjam for that.</p>
-        </div>
       </div>
 
-      <div class="mt-10">
-        <p class="text-muted mb-4">
-          <a href="https://calendar.app.google/rjBYShMURn3Kouaq8">Schedule an introductory call</a> with <a href={`${base}/nathan-curtis`}>Nathan</a> to clarify details and get started.
-        </p>
-        <BookIntro label="Schedule intro" />
-      </div>
     </section>
 
     <Testimonial
@@ -136,7 +120,7 @@ const base = import.meta.env.BASE_URL;
             Does this service include workshops or presented talks?
             <span class="text-muted group-open:rotate-45 transition-transform text-xl">+</span>
           </summary>
-          <p class="mt-3 text-muted text-sm">No. Coaching and consulting sessions are interactive conversations, not prepared presentations or workshops. Those are available as separate engagements.</p>
+          <p class="mt-3 text-muted text-sm">No. Advisory sessions are interactive conversations, not prepared presentations or workshops. Those are available as separate engagements. That said, Nathan will often draw on materials from his talks and workshops as part of giving advice.</p>
         </details>
       </div>
     </section>

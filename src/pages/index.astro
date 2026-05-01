@@ -10,36 +10,32 @@ const base = import.meta.env.BASE_URL;
 <Base title="Directed Edges" description="Design system consulting agency led by Nathan Curtis providing advisory coaching, consulting projects, and embedded staff augmentation.">
   <!-- Hero -->
   <section class="max-w-3xl mx-auto px-6 pt-16 pb-10">
-    <h1 class="text-4xl sm:text-5xl leading-tight mb-6">Architecting design systems at scale since 2006.</h1>
-    <BookIntro />
-    <p class="mt-10 text-lg text-muted">
-      Directed Edges is a design systems consulting agency formed in 2024 by <a href={`${base}/nathan-curtis`}>Nathan Curtis</a>. We'll apply lessons learned and patterns evolved from design systems large and small to help you thrive.
+    <h1 class="text-4xl sm:text-5xl leading-tight mb-6">Design systems that deliver today—and adapt for what AI demands tomorrow.</h1>
+    <p class="text-lg text-muted mb-4">
+      <a href={`${base}/nathan-curtis`}>Nathan Curtis</a> has spent 20 years architecting design systems at scale—defining the patterns, tokens, and component models that enterprise teams rely on. Through 100+ engagements, 100+ conference talks and workshops—including emceeing Clarity in 2018 and 2022—and writing read millions of times, he's shaped how the industry builds and operates systems.
     </p>
+    <p class="text-lg text-muted mb-6">
+      Now, as design systems become the structured foundation that AI-driven product development depends on, Directed Edges helps teams evolve their architecture, operations, and strategy for what's next.
+    </p>
+    <BookIntro />
   </section>
 
-  <!-- Services -->
+<!-- Services -->
   <section class="max-w-3xl mx-auto px-6 py-10">
     <SectionLabel label="Consulting services" />
     <p class="text-muted mb-10">We tailor services to what you get and how you'd like to work together to deliver the value and impact you need.</p>
 
-    <div class="grid sm:grid-cols-2 gap-8">
+    <div class="grid sm:grid-cols-3 gap-8">
       <div>
-        <h3 class="text-lg mb-2">Design &amp; architecture</h3>
-        <p class="text-sm text-muted mb-2">Tackle challenges like design tokens, component design and production, composition and library ecosystems.</p>
-        <a href={`${base}/design-and-architecture`} class="text-sm font-medium">Learn more</a>
+        <h3 class="text-lg mb-2"><a href={`${base}/advisory`}>Advisory</a></h3>
+        <p class="text-sm text-muted">Collaborative sessions supported by async consulting to refine architecture, operations and strategy.</p>
       </div>
       <div>
-        <h3 class="text-lg mb-2">Office hours &amp; consulting</h3>
-        <p class="text-sm text-muted mb-2">Collaborative sessions supported by async consulting to refine architecture, operations and strategy.</p>
-        <a href={`${base}/office-hours-and-consulting`} class="text-sm font-medium">Learn more</a>
+        <h3 class="text-lg mb-2">Architecture</h3>
+        <p class="text-sm text-muted">Tackle challenges like design tokens, component design and production, composition and library ecosystems.</p>
       </div>
       <div>
-        <h3 class="text-lg mb-2">Strategy &amp; operations</h3>
-        <p class="text-sm text-muted mb-2">Discover where a system is, define where it should go and how it works, and initiate a roadmap to get there.</p>
-        <a href={`${base}/design-system-strategy-and-operations`} class="text-sm font-medium">Learn more</a>
-      </div>
-      <div>
-        <h3 class="text-lg mb-2">Team leadership</h3>
+        <h3 class="text-lg mb-2">Leadership</h3>
         <p class="text-sm text-muted">Augment your team with a seasoned leader to drive strategy, develop staff, guide architecture and manage work.</p>
       </div>
     </div>
@@ -68,14 +64,4 @@ const base = import.meta.env.BASE_URL;
     />
   </section>
 
-  <!-- Tools -->
-  <section class="max-w-3xl mx-auto px-6 py-10">
-    <SectionLabel label="Tools" />
-    <p class="text-muted mb-6">Recent tools include:</p>
-    <ul class="space-y-3">
-      <li><a href="https://www.specsplugin.com">Specs</a> <span class="text-muted">&mdash; Figma plugin</span></li>
-      <li><a href="https://www.figma.com/community/plugin/1077953882260191737/visual-difference">Visual difference</a> <span class="text-muted">&mdash; Figma plugin</span></li>
-      <li><a href="https://contrast-grid.eightshapes.com/">Contrast grid</a> <span class="text-muted">&mdash; Web app</span></li>
-    </ul>
-  </section>
 </Base>

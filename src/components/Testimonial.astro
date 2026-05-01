@@ -4,9 +4,10 @@ interface Props {
   name: string;
   role: string;
   image?: string;
+  nameLink?: string;
 }
 
-const { quote, name, role, image } = Astro.props;
+const { quote, name, role, image, nameLink } = Astro.props;
 ---
 
 <blockquote class="border-l-4 border-border pl-6 py-2 my-12">
@@ -14,7 +15,7 @@ const { quote, name, role, image } = Astro.props;
   <footer class="mt-4 flex items-center gap-3 text-sm">
     {image && <img src={image} alt={name} class="w-10 h-10 rounded-full object-cover shrink-0" />}
     <div>
-      <span class="font-semibold">{name}</span><span class="text-muted">, {role}</span>
+      {nameLink ? <a href={nameLink} class="font-semibold">{name}</a> : <span class="font-semibold">{name}</span>}<span class="text-muted">, {role}</span>
     </div>
   </footer>
 </blockquote>

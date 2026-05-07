@@ -7,6 +7,7 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   site: 'https://directededges.com',
   base: '',
+  trailingSlash: 'never',
   vite: {
     plugins: [tailwindcss()]
   }

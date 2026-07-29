@@ -9,14 +9,14 @@ const highlighted = [
     href: 'https://medium.com/salesforce-ux/the-salesforce-team-model-for-scaling-a-design-system-d89c2a2d404b',
     title: 'The Salesforce Team Model for Scaling a Design System',
     author: 'Jina Anne',
-    meta: '2015 · Salesforce Design',
+    year: 2015,
     note: "Jina's own account of applying and extending the model at Salesforce.",
   },
   {
     href: 'https://www.shaunbent.co.uk/blog/why-federated-design-systems-keep-failing/',
     title: 'Why Federated Design Systems Keep Failing',
     author: 'Shaun Bent',
-    meta: '2025',
+    year: 2025,
     note: "Shaun's account dug deeper into realities on the ground.",
   },
 ];
@@ -106,19 +106,13 @@ const years = Object.keys(byYear).sort((a, b) => b - a);
 
     <!-- Highlighted -->
     <section class="my-10">
-      <SectionLabel label="Worth reading directly" />
-      <p class="text-muted mb-4">Two pieces I want to point to by name.</p>
-      <div class="space-y-6">
+      <SectionLabel label="Notable case studies" />
+      <p class="text-muted mb-4">Pieces that apply the model concepts in a practical, enterprise setting.</p>
+      <ul class="space-y-3 text-sm">
         {highlighted.map((item) => (
-          <div class="flex gap-6 items-start">
-            <div>
-              <h4 class="text-sm font-semibold mb-1"><a href={item.href}>{item.title}</a></h4>
-              <p class="text-sm text-muted mb-1">{item.note}</p>
-              <p class="text-xs text-muted">{item.meta} &middot; {item.author}</p>
-            </div>
-          </div>
+          <li><a href={item.href} class="font-bold">{item.title}</a><br /><span class="text-muted">{item.author} &mdash; {item.year}</span><br /><span class="text-muted">{item.note}</span></li>
         ))}
-      </div>
+      </ul>
     </section>
 
     <!-- Remaining, by year -->

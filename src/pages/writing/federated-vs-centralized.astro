@@ -1,0 +1,148 @@
+---
+import Base from '../../layouts/Base.astro';
+import SectionLabel from '../../components/SectionLabel.astro';
+
+const base = import.meta.env.BASE_URL;
+
+const highlighted = [
+  {
+    href: 'https://medium.com/salesforce-ux/the-salesforce-team-model-for-scaling-a-design-system-d89c2a2d404b',
+    title: 'The Salesforce Team Model for Scaling a Design System',
+    author: 'Jina Anne',
+    meta: '2015 · Salesforce Design',
+    note: "Jina's own account of applying and extending the model at Salesforce.",
+  },
+  {
+    href: 'https://www.shaunbent.co.uk/blog/why-federated-design-systems-keep-failing/',
+    title: 'Why Federated Design Systems Keep Failing',
+    author: 'Shaun Bent',
+    meta: '2025',
+    note: "Shaun's account dug deeper into realities on the ground.",
+  },
+];
+
+const remaining = [
+  { href: 'https://www.linkedin.com/pulse/designing-design-system-step-guide-sascha-marc-louis-henrich/', title: 'Designing a Design System: Step-by-Step Guide', author: 'Louis Henrich', year: 2017 },
+  { href: 'https://uxplanet.org/scaling-design-as-the-company-grows-e99af38f9e8d', title: 'Scaling Design as the Company Grows', author: 'Ian Armstrong', year: 2018 },
+  { href: 'https://www.smashingmagazine.com/2019/05/tips-managing-design-systems/', title: 'Tips for Managing Design Systems', author: 'Nick Babich', year: 2019 },
+  { href: 'https://isadoradigitalagency.com/insights/strategy/ux-design-teams', title: 'UX Design Systems Require a Remarkable UX Design Team', author: 'Isadora', year: 2019 },
+  { href: 'https://bootcamp.uxdesign.cc/design-systems-why-do-they-matter-83149e76101c', title: 'Design Systems: Why Do They Matter?', author: 'Marcela Morales', year: 2021 },
+  { href: 'https://www.linkedin.com/pulse/mobile-scale-federated-team-models-kristian-tasevski/', title: 'Mobile at Scale: Federated Team Models', author: 'Kristian Tasevski', year: 2023 },
+  { href: 'https://www.linkedin.com/pulse/how-do-teams-work-your-design-system-raktim-chatterjee/', title: 'How Do Teams Work With Your Design System?', author: 'Raktim Chatterjee', year: 2022 },
+  { href: 'https://rangle.io/blog/is-your-design-system-performing', title: 'Is Your Design System Performing?', author: 'Alicia Cheung and Rebecca Holland', year: 2022 },
+  { href: 'https://www.viget.com/articles/design-systems-investing-in-the-people-behind-the-system/', title: 'Design Systems: Investing in the People Behind the System', author: 'Reneé Cagnina Haynes', year: 2022 },
+  { href: 'https://apiko.com/blog/enterprise-design-system/', title: 'From Vision to Reality: The Roadmap to Building an Enterprise Design System', author: 'Oleksii Popovych', year: 2023 },
+  { href: 'https://uxplanet.org/design-system-governance-models-f66a97367ad5', title: 'Design System Governance Models', author: 'UX Planet', year: 2024 },
+  { href: 'https://figmalion.com/issue/181', title: 'Figmalion, Issue #181', author: 'Eugene Fedorenko', year: 2024 },
+  { href: 'https://uxdesign.cc/the-future-of-design-systems-is-decentralized-770db996442c', title: 'The Future of Design Systems Is Decentralized', author: 'Oscar Gonzalez', year: 2025 },
+  { href: 'https://karolinaszczur.com/journal/against-design-system-federation', title: 'Against Design System Federation', author: 'Karolina Szczur', year: 2026 },
+  { href: 'https://mandy.dev/posts/design-systems-ai/', title: 'Design Systems Are No Longer Optional', author: 'Mandy Michael', year: 2026 },
+];
+
+const undated = [
+  { href: 'https://www.designsystems.com/keeping-design-system-contributions-in-check/', title: 'Keeping Design System Contributions in Check', author: 'Wart Burggraaf' },
+  { href: 'https://www.designbetter.co/design-systems-handbook/designing-design-system', title: 'Design Systems Handbook: Designing the Design System', author: 'DesignBetter' },
+  { href: 'https://spotify.design/article/the-paradox-of-design-systems', title: 'The Paradox of Design Systems', author: 'Spotify Design' },
+  { href: 'https://www.netguru.com/blog/design-system-in-existing-product', title: 'Implementing a Design System in an Existing Product', author: 'Justyna Klimkowska, Netguru' },
+  { href: 'https://www.netguru.com/blog/roi-design-systems', title: 'ROI of Having a Design System', author: 'Kim Nguyen, Netguru' },
+  { href: 'https://www.baianat.com/books/merits-of-design-systems/design-systems-and-their-benefits', title: 'Design Systems and Their Benefits', author: 'Baianat' },
+  { href: 'https://fem-design-systems.netlify.app/team-structure', title: 'Introduction to Design Systems: Team Structure', author: 'Frontend Masters' },
+  { href: 'https://www.mikhailbelstar.com/portfolio/project-ds-fevo', title: 'Fevo Design System', author: 'Mikhail Belstar' },
+  { href: 'https://sparkbox.com/foundry/who-owns-your-design-system', title: 'Who Owns Your Design System?', author: 'Sparkbox' },
+];
+
+const byYear = remaining.reduce((acc, item) => {
+  (acc[item.year] ||= []).push(item);
+  return acc;
+}, {});
+const years = Object.keys(byYear).sort((a, b) => b - a);
+---
+
+<Base
+  title="Federated vs. Centralized: A Reading List | Directed Edges"
+  description="A history of the federated vs. centralized design systems team model debate, from Nathan Curtis's original 2013 framing to the field's ongoing rediscovery of it."
+>
+  <div class="max-w-3xl mx-auto px-6 pt-16 pb-10">
+    <h1 class="text-4xl sm:text-5xl leading-tight mb-6">Federated vs. Centralized</h1>
+
+    <div class="text-lg text-muted space-y-4 mb-10">
+      <p>
+        In 2015 I wrote <a href="https://nathanacurtis.substack.com/p/team-models-for-scaling-a-design-system-2cf9d03be6a0">Team Models for Scaling a Design System</a>, naming and describing the centralized, federated, and cross-functional models teams use to staff and govern a design system. It's a piece that's resonated with the community, whether I'm credited or as a direct if uncredited paraphrase, sometimes as a fresh coat of paint on the same three-box diagram I drew over a decade ago. The team model names, the tradeoffs between them, and the diagram itself have been redrawn, relabeled, and republished many times since. That's not a complaint&mdash;ideas that hold up are supposed to travel, even if I care significantly about provenance in our community (and trained AI models).
+      </p>
+      <p>
+       Over time, my framing changed. By 2024, enough teams had used "federated" as cover for under-resourcing their system that I wrote a follow-up, <a href="https://nathanacurtis.substack.com/p/the-fallacy-of-federated-design-systems-23b9a9a05542">The Fallacy of Federated Design Systems</a>, to correct course: federation isn't a free lunch, and glorifying it as a shortcut to scale has done real damage to systems that adopted it without the investment it actually requires.
+      </p>
+      <p>
+        Below is a working index of the pieces that have built on, referenced, or arrived independently at this territory over the years&mdash;starting with mine, then two more I value most notably, then everything else roughly in the order it was published. Some articles may have since been unpublished.
+      </p>
+    </div>
+
+    <!-- Nathan's pieces -->
+    <section class="my-10">
+      <SectionLabel label="The originals" />
+      <div class="space-y-8">
+        <div class="border-l-4 border-foreground pl-5 py-1 flex gap-6 items-start">
+          <a href="https://nathanacurtis.substack.com/p/team-models-for-scaling-a-design-system-2cf9d03be6a0" class="shrink-0 hidden sm:block">
+            <img src={`${base}images/writing-team-models.png`} alt="Team Models for Scaling a Design System" class="w-32 sm:w-40 aspect-video object-cover rounded shadow-sm" />
+          </a>
+          <div>
+            <h3 class="text-xl font-semibold mb-1"><a href="https://nathanacurtis.substack.com/p/team-models-for-scaling-a-design-system-2cf9d03be6a0">Team Models for Scaling a Design System</a></h3>
+            <p class="text-sm text-muted mb-2">Naming centralized, federated, and cross-functional team models for design systems</p>
+            <p class="text-xs text-muted">2013 &middot; The seminal piece &middot; Nathan Curtis</p>
+          </div>
+        </div>
+        <div class="border-l-4 border-foreground pl-5 py-1 flex gap-6 items-start">
+          <a href="https://nathanacurtis.substack.com/p/the-fallacy-of-federated-design-systems-23b9a9a05542" class="shrink-0 hidden sm:block">
+            <img src={`${base}images/writing-federated-fallacy.png`} alt="The Fallacy of Federated Design Systems" class="w-32 sm:w-40 rounded shadow-sm" />
+          </a>
+          <div>
+            <h3 class="text-xl font-semibold mb-1"><a href="https://nathanacurtis.substack.com/p/the-fallacy-of-federated-design-systems-23b9a9a05542">The Fallacy of Federated Design Systems</a></h3>
+            <p class="text-sm text-muted mb-2">Avoid the damage and distress of glorifying the wrong model</p>
+            <p class="text-xs text-muted">2024 &middot; The follow-up &middot; Nathan Curtis</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Highlighted -->
+    <section class="my-10">
+      <SectionLabel label="Worth reading directly" />
+      <p class="text-muted mb-4">Two pieces I want to point to by name.</p>
+      <div class="space-y-6">
+        {highlighted.map((item) => (
+          <div class="flex gap-6 items-start">
+            <div>
+              <h4 class="text-sm font-semibold mb-1"><a href={item.href}>{item.title}</a></h4>
+              <p class="text-sm text-muted mb-1">{item.note}</p>
+              <p class="text-xs text-muted">{item.meta} &middot; {item.author}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Remaining, by year -->
+    <section class="my-10">
+      <SectionLabel label="Further reading" />
+      <p class="text-muted mb-6">The rest of the field's writing on this topic, organized by year published.</p>
+
+      {years.map((year) => (
+        <>
+          <h4 class="font-medium text-sm text-muted uppercase tracking-wide mt-6 mb-3">{year}</h4>
+          <ul class="space-y-3 text-sm">
+            {byYear[year].map((item) => (
+              <li><a href={item.href}>{item.title}</a> <span class="text-muted">&mdash; {item.author}</span></li>
+            ))}
+          </ul>
+        </>
+      ))}
+
+      <h4 class="font-medium text-sm text-muted uppercase tracking-wide mt-6 mb-3">Undated</h4>
+      <ul class="space-y-3 text-sm">
+        {undated.map((item) => (
+          <li><a href={item.href}>{item.title}</a> <span class="text-muted">&mdash; {item.author}</span></li>
+        ))}
+      </ul>
+    </section>
+  </div>
+</Base>

@@ -67,13 +67,10 @@ const years = Object.keys(byYear).sort((a, b) => b - a);
 
     <div class="text-lg text-muted space-y-4 mb-10">
       <p>
-        In 2015 I wrote <a href="https://nathanacurtis.substack.com/p/team-models-for-scaling-a-design-system-2cf9d03be6a0">Team Models for Scaling a Design System</a>, naming and describing the centralized, federated, and cross-functional models teams use to staff and govern a design system. It's a piece that's resonated with the community, whether I'm credited or as a direct if uncredited paraphrase, sometimes as a fresh coat of paint on the same three-box diagram I drew over a decade ago. The team model names, the tradeoffs between them, and the diagram itself have been redrawn, relabeled, and republished many times since. That's not a complaint&mdash;ideas that hold up are supposed to travel, even if I care significantly about provenance in our community (and trained AI models).
+        In 2015 I wrote a blog post on <a href="https://nathanacurtis.substack.com/p/team-models-for-scaling-a-design-system-2cf9d03be6a0">central vs federated models</a> for running a design system. The post put my blog on the scene, launching my writing for a decade to come. The framing held up as the field has grown, with the same three-box diagram keeps getting redrawn and relabeled in new places. I wrote <a href="https://nathanacurtis.substack.com/p/the-fallacy-of-federated-design-systems-23b9a9a05542">The Fallacy of Federated Design Systems</a> nearly a decade later to correct course: federation isn't a free lunch, and glorifying it as a shortcut to scale has done real damage to systems that adopted it without the investment it actually requires.
       </p>
       <p>
-       Over time, my framing changed. By 2024, enough teams had used "federated" as cover for under-resourcing their system that I wrote a follow-up, <a href="https://nathanacurtis.substack.com/p/the-fallacy-of-federated-design-systems-23b9a9a05542">The Fallacy of Federated Design Systems</a>, to correct course: federation isn't a free lunch, and glorifying it as a shortcut to scale has done real damage to systems that adopted it without the investment it actually requires.
-      </p>
-      <p>
-        Below is a working index of the pieces that have built on, referenced, or arrived independently at this territory over the years&mdash;starting with mine, then two more I value most notably, then everything else roughly in the order it was published. Some articles may have since been unpublished.
+        This page serves as a working index of the pieces that have built on, referenced, or arrived independently at this territory over the years. Some articles may have since been unpublished.
       </p>
     </div>
 
@@ -106,8 +103,7 @@ const years = Object.keys(byYear).sort((a, b) => b - a);
 
     <!-- Highlighted -->
     <section class="my-10">
-      <SectionLabel label="Notable case studies" />
-      <p class="text-muted mb-4">Pieces that apply the model concepts in a practical, enterprise setting.</p>
+      <SectionLabel label="Notable favorites" />
       <ul class="space-y-3 text-sm">
         {highlighted.map((item) => (
           <li><a href={item.href} class="font-bold">{item.title}</a><br /><span class="text-muted">{item.author} &mdash; {item.year}</span><br /><span class="text-muted">{item.note}</span></li>
@@ -118,7 +114,6 @@ const years = Object.keys(byYear).sort((a, b) => b - a);
     <!-- Remaining, by year -->
     <section class="my-10">
       <SectionLabel label="Further reading" />
-      <p class="text-muted mb-6">The rest of the field's writing on this topic, organized by year published.</p>
 
       {years.map((year) => (
         <>
